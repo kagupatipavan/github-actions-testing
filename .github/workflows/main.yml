@@ -18,4 +18,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: runif
+        if: ${{ 'pavan'== 'pavan' }}
+        steps:
+          - name: run it
+            run: echo pwd
+          - name: run it also
+            run: echo hostname
+  
 
