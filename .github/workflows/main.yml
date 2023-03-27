@@ -13,7 +13,7 @@ jobs:
         run: |
           echo "Running tests..."
           echo "::set-output name=success::true"
-        if: ${{ 'true' == 'true' }}
+        if: ${{ 'flase' == 'true' }}
       - name: pavan new
         run: |
           echo "Deploying..."
