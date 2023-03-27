@@ -4,7 +4,7 @@ on:
     branches: [ developer ]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -13,8 +13,10 @@ jobs:
         run: |
           echo "Running tests..."
           echo "::set-output name=success::true"
-      - name: Deploy
         if: ${{ steps.tests.outputs.success == 'true' }}
+      - name: pavan new
         run: |
           echo "Deploying..."
           echo "Cleaning up..."
+      - name: hehehe
+        run: echo "Heating..."
