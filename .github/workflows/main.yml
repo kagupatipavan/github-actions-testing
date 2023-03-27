@@ -14,13 +14,13 @@ jobs:
           echo "::set-output name=success::true"
   prodbuild:
     runs-on: self-hosted
-    if: ${{ 'name' == 'name'}}
+    if: ${{ 'name' == 'king'}}
     steps:
       - name: prod started
         run: echo "prd"
   devBuild:
     runs-on: self-hosted
-    if: ${{ 'name' == 'dev'}}
+    if: ${{ 'dev' == 'dev'}}
     steps:
     - name: pavan king
       run: echo "herooo"
