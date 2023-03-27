@@ -12,14 +12,15 @@ jobs:
         run: |
           echo "Building..."
           echo "::set-output name=success::true"
-      - name: Test
-        run: |
-          echo "Running tests..."
-          echo "::set-output name=success::true"
-      - name: Deploy
-        if: ${{ 'true' == 'true' }}
-        steps:
-          - name: Deploy to Staging
-            run: echo "Deploying to staging..."
-          - name: Deploy to Production
-            run: echo "Deploying to production..."
+  prodbuild:
+    runs-on: self-hosted
+    if: ${{ 'name' == 'name'}}
+    steps:
+      - name: prod started
+        run: echo "prd"
+  devBuild:
+    runs-on: self-hosted
+    if: ${{ 'name' == 'dev'}}
+    steps:
+    - name: pavan king
+      run: echo "herooo"
