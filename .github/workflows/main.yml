@@ -4,9 +4,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: final
     steps:
     - name: approvers
       uses: trstringer/manual-approval@v1
       with:
-        secret: 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
+        secret: ${{secrets.TOKEN_SECRET}}
         approvers: kagupatipavan
