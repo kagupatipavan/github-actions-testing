@@ -9,5 +9,5 @@ jobs:
     - name: approvers
       uses: trstringer/manual-approval@v1
       with:
-        secret: ${{ github.TOKEN }}
+        secret: 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
         approvers: kagupatipavan
