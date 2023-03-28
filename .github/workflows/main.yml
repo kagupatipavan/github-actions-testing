@@ -6,21 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Build
-        run: |
-          echo "Building..."
-          echo "::set-output name=success::true"
-  prodbuild:
-    runs-on: self-hosted
-    if: ${{ 'name' == 'king'}}
-    steps:
-      - name: prod started
-        run: echo "prd"
-  devBuild:
-    runs-on: self-hosted
-    if: ${{ 'dev' == 'dev'}}
-    steps:
-    - name: pavan king
-      run: echo "herooo"
+    - name: approvers
+      uses: trstringer/manual-approval@v1
+      with:
+        secret: ${{ github.TOKEN }}
+        approvers: kagupatipavan
