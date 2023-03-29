@@ -6,8 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     environment: final
     steps:
-    - name: approvers
-      uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{secrets.TOKEN_SECRET}}
-        approvers: kagupatipavan
+    - name: build app
+      run: docker build -f /github-actions-testing/Dockerfile
