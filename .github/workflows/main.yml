@@ -6,7 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: final
     steps:
-    - name: build app
-      run: docker build -t pavandocker dev.Dockerfile
     - name: build
       run: ls
+    - name: build app
+      run: docker build -t pavandocker dev.Dockerfile
+   
