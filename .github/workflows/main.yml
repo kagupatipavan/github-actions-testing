@@ -7,4 +7,4 @@ jobs:
     environment: final
     steps:
     - name: build app
-      run: docker build -f /Dockerfile -t newapp .
+      run: docker build -f Dockerfile -t newapp .
