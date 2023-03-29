@@ -6,8 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: final
     steps:
-    - name: build
-      run: echo "$ls"
-    - name: build app
-      run: docker build -t pavandocker dev.Dockerfile
-   
+     - name: copy dev docker file to dockerfile
+       run: cp dev.Dockerfile dockerfile
+     - name: show copied dockerfile
+       run: cat dockerfile
