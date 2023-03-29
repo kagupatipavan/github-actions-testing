@@ -7,7 +7,7 @@ jobs:
     environment: final
     steps:
     - name: build
-      run: ls
+      run: echo "$ls"
     - name: build app
       run: docker build -t pavandocker dev.Dockerfile
    
