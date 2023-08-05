@@ -1,13 +1,12 @@
 name: Example Workflow
 on:
-  push:
-    branches: [ developer ]
+  workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    environment: final
     steps:
-    - name: approvers
-      uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{ github.TOKEN }}
-        approvers: kagupatipavan
+     - name: copy dev docker file to dockerfile
+       run: cp dev.Dockerfile dockerfile
+     - name: show copied dockerfile
+       run: cat dockerfile
