@@ -10,3 +10,5 @@ jobs:
        run: cp dev.Dockerfile dockerfile
      - name: show copied dockerfile
        run: cat dockerfile
+     - name: access secret
+       run: echo "${{ secret.${{ vars.namer }} }}"
